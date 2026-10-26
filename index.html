@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#">My Portfolio</a>
+      <nav class="nav" aria-label="Main navigation">
+        <button class="nav-toggle" aria-expanded="false" aria-controls="primary-navigation">Menu</button>
+        <ul id="primary-navigation" class="nav-list">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="theme-toggle" aria-label="Toggle dark mode">
+        <span class="theme-icon">
+          <svg class="sun" viewBox="0 0 24 24" width="20" height="20">
+            <path d="M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10zm0-12l1.5 1.5M12 3V1m5.5 2.5L19 4M21 12h2m-2.5 5.5L19 19m-7 2v2m-7.5-2.5L5 19M3 12H1m2.5-5.5L5 5"/>
+          </svg>
+          <svg class="moon" viewBox="0 0 24 24" width="20" height="20">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title">Hi — I'm a beginner web developer</h1>
+          <p class="hero-sub">I build simple, accessible websites and keep learning every day. I am also learning skills of Java and python for Backend development.</p>
+          <p>
+            <a class="btn primary" href="#projects">See my projects</a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </p>
+        </div>
+        <div class="hero-media">
+          <img src="images/kaw1.jpg" alt="Portrait" loading="lazy" onerror="this.onerror=null;this.src='assets/avatar.svg'">
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="about container">
+      <h2>About</h2>
+      <div class="about-grid">
+        <div>
+          <p>I'm learning web development — HTML, CSS, and JavaScript. This beginner portfolio showcases small projects, skills, and a contact form so you can reach me.</p>
+          <p>I focus on semantic markup, responsive layout, and simple interactivity.</p>
+        </div>
+        <div>
+          <ul class="meta-list">
+            <li><strong>Location:</strong> kampala, Uganda</li>
+            <li><strong>Role:</strong> Junior / Learner</li>
+            <li><strong>Available:</strong> Yes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects container">
+      <h2>Projects</h2>
+      <p class="muted">A few small projects to get started. Click to view (demo links are placeholders).</p>
+      
+      <!-- Project Filters -->
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="web">Web</button>
+        <button class="filter-btn" data-filter="js">JavaScript</button>
+        <button class="filter-btn" data-filter="ui">UI/UX</button>
+      </div>
+      
+      <div class="projects-grid">
+        <article class="card" data-category="web js">
+          <img class="project-thumb" src="images/ToDo_List.png" alt="Project 1 screenshot" tabindex="0" role="button" aria-label="Open Project One image" data-gallery="projects" data-index="0" data-caption="Project One — interactive UI" data-full="images/ToDo_List.png" />
+          <h3>Project One</h3>
+          <p class="muted">A small interactive UI built with HTML/CSS/JS.</p>
+          <p class="card-actions"><a class="btn" href="#">View</a> <a class="btn ghost" href="#">Source</a></p>
+        </article>
+
+        <article class="card" data-category="web ui">
+          <img class="project-thumb" src="images/responsive_layout.png" alt="Project 2 screenshot" tabindex="0" role="button" aria-label="Open Project Two image" data-gallery="projects" data-index="1" data-caption="Project Two — responsive layout" data-full="images/responsive_layout.png" />
+          <h3>Project Two</h3>
+          <p class="muted">A responsive layout challenge and practice project.</p>
+          <p class="card-actions"><a class="btn" href="#">View</a> <a class="btn ghost" href="#">Source</a></p>
+        </article>
+
+        <article class="card" data-category="js">
+          <img class="project-thumb" src="images/calculator.png" alt="Project 3 screenshot" tabindex="0" role="button" aria-label="Open Project Three image" data-gallery="projects" data-index="2" data-caption="Project Three — DOM app" data-full="images/calculator.png" />
+          <h3>Project Three</h3>
+          <p class="muted">Small JS app demonstrating DOM manipulation.</p>
+          <p class="card-actions"><a class="btn" href="#">View</a> <a class="btn ghost" href="#">Source</a></p>
+        </article>
+        
+        <!-- Additional project for filtering demo -->
+        <article class="card" data-category="web ui">
+          <img class="project-thumb" src="images/portfolio.png" alt="Project 4 screenshot" tabindex="0" role="button" aria-label="Open Project Four image" data-gallery="projects" data-index="3" data-caption="Project Four — Portfolio Design" data-full="images/portfolio.png" />
+          <h3>Project Four</h3>
+          <p class="muted">Clean portfolio design with modern aesthetics.</p>
+          <p class="card-actions"><a class="btn" href="#">View</a> <a class="btn ghost" href="#">Source</a></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="skills container">
+      <h2>Skills</h2>
+      <p class="muted">Technologies I use and learn.</p>
+      
+      <div class="skills-progress">
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">HTML</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-percent="90"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">CSS</span>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-percent="85"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-percent="75"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Java</span>
+            <span class="skill-percent">70%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-percent="70"></div>
+          </div>
+        </div>
+        
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">Python</span>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="skill-bar">
+            <div class="skill-progress" data-percent="80"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact container">
+      <h2>Contact</h2>
+      <p class="muted">Fill the form and I'll get back to you.</p>
+      <form id="contact-form" action="https://formspree.io/f/your-form-id" method="POST" novalidate>
+        <div class="form-grid">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+        </div>
+        <p><button class="btn primary" type="submit">Send message</button></p>
+        <p id="form-status" aria-live="polite" class="form-status"></p>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer with social links -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="social-links" aria-label="Social media links">
+      <a class="social-link linkedin" href="https://www.linkedin.com/in/kawuma-samuel-b82822217" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" fill="currentColor"><path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1 4.98 2.12 4.98 3.5zM0 8h5v14H0zM7.5 8H12v2.2h.1c.6-1.1 2-2.2 4.1-2.2 4.4 0 5.2 2.9 5.2 6.7V22H18v-6.6c0-1.6 0-3.7-2.3-3.7-2.3 0-2.6 1.8-2.6 3.6V22H7.5z"/></svg>
+      </a>
+
+      <a class="social-link facebook" href="https://www.facebook.com/sa5ms0" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" fill="currentColor"><path d="M22 12.07C22 6.48 17.52 2 11.93 2S2 6.48 2 12.07c0 5 3.66 9.13 8.44 9.93v-7.04H7.9v-2.9h2.54V9.65c0-2.5 1.49-3.88 3.77-3.88 1.09 0 2.23.2 2.23.2v2.45h-1.25c-1.23 0-1.61.77-1.61 1.56v1.87h2.74l-.44 2.9h-2.3V22C18.34 21.2 22 17.07 22 12.07z"/></svg>
+      </a>
+
+      <a class="social-link instagram" href="https://www.instagram.com/sa5ms0" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" fill="currentColor"><path d="M7 2C4.24 2 2 4.24 2 7v10c0 2.76 2.24 5 5 5h10c2.76 0 5-2.24 5-5V7c0-2.76-2.24-5-5-5H7zm10 3a1 1 0 110 2 1 1 0 010-2zM12 7a5 5 0 110 10 5 5 0 010-10zm0 2a3 3 0 100 6 3 3 0 000-6z"/></svg>
+      </a>
+
+      <a class="social-link whatsapp" href="https://wa.me/+256702031785" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" fill="currentColor"><path d="M20.52 3.48A11.93 11.93 0 0012 .1 11.9 11.9 0 003.48 3.48 11.9 11.9 0 00.1 12c0 2.03.53 4.03 1.54 5.8L0 24l6.45-1.66A11.9 11.9 0 0012 24c2.03 0 4.03-.53 5.8-1.54A11.9 11.9 0 0023.9 12a11.93 11.93 0 00-3.38-8.52zM12 21.5c-1.7 0-3.34-.44-4.77-1.27l-.34-.2-3.83.99.99-3.73-.21-.35A8.5 8.5 0 013.5 12 8.5 8.5 0 1112 21.5zm4.7-6.2c-.26-.13-1.55-.77-1.8-.86-.25-.09-.43-.13-.62.13-.19.26-.73.86-.9 1.03-.17.17-.34.19-.6.07-.26-.13-1.1-.41-2.09-1.28-.77-.66-1.28-1.48-1.43-1.74-.15-.26-.02-.4.11-.53.11-.11.26-.29.39-.44.13-.15.17-.26.26-.44.09-.17.04-.33-.02-.46-.07-.13-.62-1.5-.85-2.06-.22-.53-.45-.46-.62-.46-.16 0-.35-.02-.54-.02-.19 0-.5.07-.76.33-.25.26-.96.94-.96 2.3s.98 2.66 1.12 2.84c.13.17 1.93 2.96 4.68 4.15 1.07.46 1.9.74 2.56.95.86.29 1.65.25 2.27.15.69-.11 1.55-.63 1.77-1.23.22-.6.22-1.12.15-1.23-.07-.11-.25-.17-.52-.3z"/></svg>
+      </a>
+
+      <a class="social-link twitter" href="https://twitter.com/Sa5ms001" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false" width="18" height="18" fill="currentColor"><path d="M22.46 6c-.77.35-1.6.57-2.46.67a4.3 4.3 0 001.88-2.38 8.59 8.59 0 01-2.72 1.03 4.28 4.28 0 00-7.3 3.9A12.14 12.14 0 013 4.8a4.28 4.28 0 001.33 5.7c-.65-.02-1.26-.2-1.8-.5v.05a4.28 4.28 0 003.43 4.2c-.59.16-1.2.2-1.83.07a4.29 4.29 0 004 2.98A8.6 8.6 0 012 19.54a12.13 12.13 0 006.57 1.92c7.88 0 12.2-6.53 12.2-12.2l-.01-.56A8.7 8.7 0 0024 6.6a8.42 8.42 0 01-2.54.7z"/></svg>
+      </a>
+    </div>
+    <div class="footer-note">&copy; <span id="year"></span> My Portfolio — Built with ❤️</div>
+  </footer>
+
+  <!-- Back to top button -->
+  <button id="back-to-top" class="back-to-top" aria-hidden="true" aria-label="Back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 5l-7 7h4v7h6v-7h4l-7-7z" fill="currentColor"/>
+    </svg>
+  </button>
+
+  <!-- Image lightbox modal -->
+  <div id="lightbox" class="lightbox" aria-hidden="true" role="dialog" aria-label="Image preview">
+    <div class="lightbox-backdrop" data-action="close" tabindex="-1"></div>
+    <div class="lightbox-content" role="document">
+      <div class="lightbox-controls">
+        <button class="lightbox-close" aria-label="Close preview" title="Close">×</button>
+      </div>
+      <button class="lightbox-prev" aria-label="Previous image" title="Previous">‹</button>
+      <img id="lightbox-img" class="lightbox-img" src="images/ToDo_List.png" alt="Preview image" />
+      <button class="lightbox-next" aria-label="Next image" title="Next">›</button>
+      <div id="lightbox-caption" class="lightbox-caption" aria-live="polite"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
